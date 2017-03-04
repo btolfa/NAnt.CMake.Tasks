@@ -144,6 +144,11 @@ namespace NAnt.CMake.Tasks
                     arguments.Add(new Argument("--clean-first"));
                 }
 
+                if (OptionsForNativeTool != null || Arguments.Count > 0)
+                {
+                    arguments.Add(new Argument("--") );
+                }
+
                 if (OptionsForNativeTool != null)
                 {
                     arguments.Add(new Argument {Line = OptionsForNativeTool});

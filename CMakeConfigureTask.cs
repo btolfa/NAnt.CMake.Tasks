@@ -205,7 +205,7 @@ namespace NAnt.CMake.Tasks
                 arguments.Add(new Argument { Directory = SourceDirectory });
 
                 // Preload script
-                if (Generator != null)
+                if (PreloadScript != null)
                 {
                     arguments.Add(new Argument("-C"));
                     arguments.Add(new Argument(mPreloadScript));
